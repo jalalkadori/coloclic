@@ -14,6 +14,20 @@
     --gray: #555555;
     --card-shadow : 0 0 10px rgba(0, 0, 0, 0.3);
 }
+/* general stylign start */
+#hero button,#howTo button,#services button,
+#city button,#ads button {
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+}
+/* general stylign start */
+
 /* header styling start*/
 
 #header nav{
@@ -35,8 +49,8 @@
     transition: all 0.5s ease-in-out;
 }
 #header nav #login{
-    color: var(--red);   
-    transition: all 0.5s ease-in-out;   
+    color: var(--red);
+    transition: all 0.5s ease-in-out;
 }
 #header nav #login:hover{
     color: black;
@@ -48,24 +62,28 @@
 }
 #header nav #signup:hover{
     background-color: #000;
-    color: #fff; 
+    color: #fff;
 }
-#hero h1 {
+
+/* header styling end */
+
+/* hero section styling start */
+#hero {
+    background-image: url(../img/bg-2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#hero h1, #hero h1 .red, #hero h1 .blue {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.5;
     margin-bottom: 1rem;
 }
 #hero h1 .blue{
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.5;
     color: var(--blue);
 }
 #hero h1 .red{
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.5;
     color: var(--red);
 }
 
@@ -77,26 +95,17 @@
 }
 #hero button {
     background-color: var(--red);
-    color: #fff;
-    border-radius: 0;
-    border: none;
-    padding: 0.5rem 2.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: all 0.5s ease-in-out;
 }
 #hero button:hover {
     background-color: var(--blue);
     color: #000;
 }
-/* header styling start*/ 
+/* hero section styling end*/
 
 /* main styling start*/
 main h2{
     font-size: 2rem;
     font-weight: 700;
-    color: var(--gray);
 }
 
 
@@ -105,24 +114,16 @@ main h2{
 /* howTo section styling start*/
 #howTo img {
     width: 30%;
-}   
+}
 #howTo h5 {
     font-size: 1rem;
     font-weight: 500;
     color: var(--gray);
-    margin: 1rem 0;   
-}   
+    margin: 1rem 0;
+}
 #howTo button {
     background-color: var(--red);
-    color: #fff;
-    border-radius: 0;
-    border: none;
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: all 0.5s ease-in-out;
-}   
+}
 
 /* howTo section styling end*/
 
@@ -131,26 +132,18 @@ main h2{
     width : 30%;
 }
 #services .col h5{
+    color : var(--gray);
     font-size: 1rem;
     font-weight: 500;
-    color: var(--gray);
-    margin: 1rem 0;   
+    margin: 1rem 0;
 }
 #services button{
     background-color: var(--blue);
-    color: #fff;
-    border-radius: 0;
-    border: none;
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: all 0.5s ease-in-out;  
 }
 #services button:hover{
-    background-color: var(--red);   
+    background-color: var(--red);
     color: #fff;
-}   
+}
 
 /* services section styling end*/
 
@@ -160,7 +153,6 @@ main h2{
     width: 15rem;
     height: 15rem;
     border: none;
-    border-radius: 0;
     padding: 0;
     margin: 0;
     background-image: url(../img/city/tanger.jpg);
@@ -196,47 +188,71 @@ main h2{
 
 
 /*  ads section styling start*/
-#ads .card {
-    box-shadow: var(--card-shadow);
+#ads {
+    background-image: url(../img/Curve\ Line.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-#ads .card .img-box{
+#ads .col .card {
     box-shadow: var(--card-shadow);
-    height: 200px;
+    
+}
+#ads .card .wrapper{
+    box-shadow: var(--card-shadow);
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+}
+#ads .card .wrapper .img-box{
+    width: 100%;
+    height: 100%;
     background-repeat: none;
     background-size: cover;
     background-position: center;
 }
-#ads .card span{ 
+/* zoom the background-image on hover  */
+#ads .card .wrapper .img-box:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+#ads .card span{
     font-size: 1.2rem;
 }
-#ads .card p{ 
+#ads .card p{
     font-size: 1rem;
     color: var(--gray);
 }
-#ads .card .card-body span{ 
+#ads .card .card-body span{
     color: var(--red);
 }
-#ads .card .card-body h4{ 
+#ads .card .card-body h4{
     color: var(--gray);
     font-size: 1.5rem;
     font-weight: 700;
 }
-#ads .card .card-body h5{ 
+#ads .card .card-body h5{
     color: #000;
     font-size: 1rem;
     font-weight: 400;
 }
-#ads .card .card-body img{ 
-    width: 20%;
+#ads .card .card-body img{
+    width: 1.5rem;
 }
-#ads .card .card-body p{ 
+#ads .card .card-body p{
     color: var(--gray);
     font-size: 0.8rem;
 }
-#ads .card .card-body h6{ 
+#ads .card .card-body h6{
     color: var(--red);
     font-weight: 600;
     font-size: 1rem;
+}
+#ads button {
+    background-color: var(--blue);
+}
+#ads button:hover {
+    background-color: #000;
 }
 /*  ads section styling end*/
 
@@ -247,4 +263,25 @@ footer{
 }
 /*  footer styling end*/
 
-
+/* create a breakpoint for mobile devices */
+@media screen and (max-width: 768px) {
+    #hero .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    /* make the second child of the row class take the first place */
+    #hero .row div:nth-child(2) {
+        order: -1;
+    }
+    #hero h1, #hero h1 .red, #hero h1 .blue {
+    font-size: 2rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+    #hero img{
+        width: 50%;
+    }
+}
