@@ -1,9 +1,9 @@
 <?php
 // Start of PHP loop
 function cards() {
-    $output = '';
-    for ($i = 0; $i < 1; $i++) {
-        $output .= '
+    $cards_content = '';
+    for ($i = 0; $i < 3; $i++) {
+        $cards_content .= '
             <div class="col mb-3">
                 <div class="card">
                     <div class="d-flex justify-content-between p-2">
@@ -55,6 +55,6 @@ function cards() {
             </div>
         ';
     }
-    return $output;
+    return $cards_content;
 }
 ?>

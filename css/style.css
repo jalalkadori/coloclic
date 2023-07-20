@@ -15,8 +15,8 @@
     --card-shadow : 0 0 10px rgba(0, 0, 0, 0.3);
 }
 /* general stylign start */
-#hero button,#howTo button,#services button,
-#city button,#ads button {
+header nav #signup, #hero button,#howTo button,#services button,
+#city button,#ads button,#contact button {
     color: #fff;
     border-radius: 0;
     border: none;
@@ -44,20 +44,15 @@
 #header nav .nav-link:hover{
     color: var(--red);
 }
-#header nav button{
-    font-weight: 500;
-    transition: all 0.5s ease-in-out;
-}
 #header nav #login{
-    color: var(--red);
+    color: var(--blue);
     transition: all 0.5s ease-in-out;
 }
 #header nav #login:hover{
     color: black;
 }
 #header nav #signup{
-    background-color: var(--blue);
-    color: #fff;
+    background-color: var(--red);
     padding: 0.5rem 2rem;
 }
 #header nav #signup:hover{
@@ -138,7 +133,7 @@ main h2{
     margin: 1rem 0;
 }
 #services button{
-    background-color: var(--blue);
+    background-color: #000;
 }
 #services button:hover{
     background-color: var(--red);
@@ -249,19 +244,78 @@ main h2{
     font-size: 1rem;
 }
 #ads button {
-    background-color: var(--blue);
+    background-color: #000;
 }
 #ads button:hover {
-    background-color: #000;
+    background-color: var(--red);
 }
 /*  ads section styling end*/
 
-/*  footer styling start*/
-footer{
+/*  contact section styling start */
+#contact .container{
+    border-radius: 5px;
+    box-shadow: var(--card-shadow);
+}
+#contact .row span {
+    font-size: 2rem;
+    color: var(--red);
+}
+
+#contact form label {
+    color : var(--gray);
+}
+#contact form input, #contact form textarea{
+    border-radius: 0;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid var(--gray);
+}
+#contact form button{
+    background-color: var(--red);
+}
+#contact form button:hover{
     background-color: #000;
+}
+/*  contact section styling end*/
+
+/*  footer styling start*/
+
+footer .skewed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: #000;
+    transform: skewY(-2deg);
+    z-index: -1; /* Ensure the skewed background is behind other elements */
+}
+
+footer .footer-navigation {
+    background-color: var(--red);
+    color: #fff;
+    position: relative;
+    z-index: 1; /* Ensure the navigation is on top */
+    overflow: hidden;
+}
+
+footer .footer-navigation p span {
+    /* Style the <span> element inside the navigation paragraph */
+    font-weight: bold;
+}
+
+/* Style the social media icons */
+footer .footer-navigation .d-flex i {
+    font-size: 20px;
+    color: #fff;
+}
+
+footer .copyrights {
+    background-color: var(--gray);
     color: #fff;
 }
 /*  footer styling end*/
+
+
 
 /* create a breakpoint for mobile devices */
 @media screen and (max-width: 768px) {
@@ -283,5 +337,9 @@ footer{
     }
     #hero img{
         width: 50%;
+    }
+
+    footer .skewed {
+        transform: skewY(-5deg);
     }
 }

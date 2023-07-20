@@ -32,7 +32,7 @@ include_once './components/ads_cards.php';
                           <a class="nav-link" href="#ads">Annonces</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Contact</a>
+                          <a class="nav-link" href="#contact">Contact</a>
                       </li>
                   </ul>
                   <form class="d-flex" role="search">
@@ -152,23 +152,8 @@ include_once './components/ads_cards.php';
         <section class="py-5" id="ads">
             <h2 class="text-center mb-5">Les dernières annonces</h2>
             <div class="container">
-                <!-- Carousel -->
-                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Slides -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row row-cols-1 row-cols-lg-3 my-5">
-                                <?php echo cards(); ?>
-                            </div> 
-                        </div>
-                    </div>
+                <div class="row row-cols-1 row-cols-lg-3 my-5">
+                    <?php echo cards(); ?>
                 </div>
                 
                 <div class="d-flex justify-content-center">
@@ -178,73 +163,93 @@ include_once './components/ads_cards.php';
             
         </section>
 
-        <section class="py-5" id="ads">
-            <h2 class="text-center mb-5">Les dernières annonces</h2>
+        <section class="mb-5" id="contact">
+
             <div class="container">
-            <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="row row-cols-1 row-cols-lg-3">
-                        <?php echo cards(); ?>
-                    </div> 
+                <div class="row row-cols-1 row-cols-lg-2 ">
+                    <div class="col p-5 d-flex flex-column justify-content-center">
+                        <h2 class="py-2">Contactez-nous</h2>
+                        <div class="d-flex flex-column justify-content-between gap-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="material-symbols-outlined">call</span>
+                                <h5>+212 601020304</h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="material-symbols-outlined">email</span>
+                                <h5>Coloclic@contact.com</h5>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <h5>Street:  rue Liban resid. Lina, 5°et. appt. 53, Tanger</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-5">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nom" class="form-label">Nom et Prénom</label>
+                                <input type="text" class="form-control" name="nom">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control"  name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea type="textarea" class="form-control"  name="message"></textarea>
+                            </div>
+                            <button type="submit" class="btn w-100">Envoyer</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="row">
-                        <?php echo cards(); ?>
-                    </div> 
-                </div>
-                <div class="swiper-slide">
-                    <div class="row">
-                        <?php echo cards(); ?>
-                    </div> 
-                </div>
-                
             </div>
 
-            <!-- Add navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- Add pagination dots -->
-            <div class="swiper-pagination"></div>
-            </div>
-
-            </div>
-            
         </section>
-
-
-
-
-
-
-        
-
-
 
     </main>
 
-    <footer class="py-5">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-lg-3">
-                <div class="col">
-                    <a class="navbar-brand" href="#"><img src="./img/white-logo.png" alt="colocation" width="200"></a>
-                    <p>La colocation de tes <span>rêves</span> est entre tes mains!</p>
-                    <div class="d-flex gap-2">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
+    <footer>
+        <div class="container-fluid footer-navigation py-5">
+            <div class="skewed"></div>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-3">
+                    <div class="col mb-3">
+                        <a class="navbar-brand" href="#"><img src="./img/white-logo.png" alt="colocation" width="200"></a>
+                        <p>La colocation de tes <span>rêves</span> est entre tes mains!</p>
+                        
+                    </div>
+                    <div class="col mb-3">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">Trouver une colocation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#ads">Annonces</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="d-flex gap-2">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="col"></div>
-                <div class="col"></div>
             </div>
         </div>
+        <div class="container-fluid copyrights">
+            <p class="text-center py-3 m-0">© Coloclic 2023 - Tous droits réservés.</p>
+        </div>
+        
     </footer>
+
     
-    <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script difer src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
