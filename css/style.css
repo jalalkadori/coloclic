@@ -45,7 +45,8 @@ header nav #signup, #hero button,#howTo button,#services button,
     color: var(--red);
 }
 #header nav #login{
-    color: var(--blue);
+
+    color: #000;
     transition: all 0.5s ease-in-out;
 }
 #header nav #login:hover{
